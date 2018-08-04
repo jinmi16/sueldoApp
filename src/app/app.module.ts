@@ -5,6 +5,10 @@ import { routing, appRoutingProviders } from './app.routing';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
+// importar nuestro modulos creados
+import { ModuloEmailModule } from './modules/moduloemail.module';
+
+
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { AnimalsComponent } from './components/animals/animals.component';
@@ -29,7 +33,8 @@ import { TiendaComponent } from './components/tienda/tienda.component';
     BrowserModule,
     FormsModule,
     HttpModule,
-    routing
+    routing,
+    ModuloEmailModule
 
   ],
   providers: [
