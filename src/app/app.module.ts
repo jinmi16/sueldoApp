@@ -1,10 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+// importamos el routing
+import { routing, appRoutingProviders } from './app.routing';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-
-
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
@@ -14,8 +13,6 @@ import { KeeperComponent } from './components/keeper/keeper.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { ParqueComponent } from './components/parque/parque.component';
 import { TiendaComponent } from './components/tienda/tienda.component';
-
-
 
 @NgModule({
   declarations: [
@@ -31,10 +28,13 @@ import { TiendaComponent } from './components/tienda/tienda.component';
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    routing
 
   ],
-  providers: [],
+  providers: [
+    appRoutingProviders
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
