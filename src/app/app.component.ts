@@ -23,4 +23,14 @@ export class AppComponent implements OnInit, DoCheck  {
 
   }
 
+  borrarEmail() {
+    // remover solo un elemento del LS
+    localStorage.removeItem('emailContato');
+    // remover todo el LS
+    localStorage.clear();
+    // limpío la variable emailcontacto
+    this.emailContacto = null;
+  }
+
+
 }
