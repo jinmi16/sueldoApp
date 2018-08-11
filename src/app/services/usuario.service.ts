@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-
 import { Http, Response, Headers } from '@angular/http';
 import 'rxjs/add/operator/map';
 import { Observable } from 'rxjs/observable'; // si sale algun error instalar la libreia: npm install --save rxjs-compat
@@ -15,8 +14,11 @@ export class UsuarioService {
 
   }
 
-  register() {
+  register(user_to_register) {
+    const params = JSON.stringify(user_to_register);
+    const headers = new Headers({ 'Content-Type': 'application/json' });
 
-    return 'Texto desde el servicio';
+    return this._http.post(this.url + 'register', params, { headers: headers }).map(res => res.json());
   }
+
 }
