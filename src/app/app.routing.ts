@@ -8,6 +8,9 @@ import { ContactComponent } from './components/contact/contact.component';
 import { KeeperComponent } from './components/keeper/keeper.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 
+import { RegisterComponent } from './components/register/register.component';
+import { LoginComponent } from './components/login/login.component';
+
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -16,6 +19,8 @@ const appRoutes: Routes = [
   { path: 'animales', component: AnimalsComponent },
   { path: 'contacto', component: ContactComponent },
   { path: 'cuidadores', component: KeeperComponent },
+  { path: 'registro', component: RegisterComponent },
+  { path: 'login', component: LoginComponent },
    // { path: '404', component: NotFoundComponent },
   { path: '**', component: NotFoundComponent } // ** es pagina 404 cuando no existe lapagina
 

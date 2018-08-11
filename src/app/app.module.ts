@@ -18,6 +18,8 @@ import { KeeperComponent } from './components/keeper/keeper.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { ParqueComponent } from './components/parque/parque.component';
 import { TiendaComponent } from './components/tienda/tienda.component';
+import { LoginComponent } from './components/login/login.component';
+import { RegisterComponent } from './components/register/register.component';
 /*
 import { MainComponent } from './admin/components/main/main.component';
 import { AddComponent } from './admin/components/usuario/add/add.component';
@@ -33,7 +35,9 @@ import { ListComponent } from './admin/components/usuario/list/list.component';
     KeeperComponent,
     NotFoundComponent,
     ParqueComponent,
-    TiendaComponent
+    TiendaComponent,
+    LoginComponent,
+    RegisterComponent
     /*
     MainComponent,
     AddComponent,
