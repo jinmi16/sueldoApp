@@ -15,11 +15,13 @@ const adminRoutes: Routes = [
     path: 'admin-panel', // localhost:4200/admin-lanel/listado
     component: MainComponent,
     children: [
+      { path: '', redirectTo: 'listado', pathMatch: 'full' },
       { path: 'listado', component: ListComponent },
       { path: 'crear', component: AddComponent },
-      { path: 'editar', component: EditComponent },
+      { path: 'editar', component: EditComponent }
     ]
-  }
+  },
+  {path: 'listado-del-panel', component: ListComponent }
 ];
 
 @NgModule({
