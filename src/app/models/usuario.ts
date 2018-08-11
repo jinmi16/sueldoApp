@@ -1,4 +1,5 @@
 export class Usuario {
+  // modelo de datos usuario
   constructor(
     public _id: string,
     public nikname: string,
