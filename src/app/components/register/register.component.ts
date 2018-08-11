@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute, Params } from '@angular/router';
 
+// importamos modelo de usuario
+import { Usuario } from '../../models/usuario';
+
 
 @Component({
   selector: 'app-register',
@@ -9,6 +12,7 @@ import { Router, ActivatedRoute, Params } from '@angular/router';
 })
 export class RegisterComponent implements OnInit {
   public title: String;
+  public usuario: Usuario;
   constructor(
     private _route: ActivatedRoute,
     private _router: Router
@@ -16,10 +20,14 @@ export class RegisterComponent implements OnInit {
 
   ) {
     this.title = 'Registro';
+    this.usuario = new Usuario('', '', '', '', '', '', '', '', '');
   }
 
   ngOnInit() {
     console.log('register.componet cargado !!');
+  }
+  onSubmit() {
+    console.log(this.usuario);
   }
 
 }
