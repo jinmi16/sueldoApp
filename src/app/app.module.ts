@@ -7,6 +7,7 @@ import { HttpModule } from '@angular/http';
 
 // importar nuestro modulos creados
 import { ModuloEmailModule } from './modules/moduloemail.module';
+import { AdminModule } from './admin/admin.module';
 
 
 import { AppComponent } from './app.component';
@@ -17,7 +18,12 @@ import { KeeperComponent } from './components/keeper/keeper.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { ParqueComponent } from './components/parque/parque.component';
 import { TiendaComponent } from './components/tienda/tienda.component';
-
+/*
+import { MainComponent } from './admin/components/main/main.component';
+import { AddComponent } from './admin/components/usuario/add/add.component';
+import { EditComponent } from './admin/components/usuario/edit/edit.component';
+import { ListComponent } from './admin/components/usuario/list/list.component';
+*/
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,14 +33,21 @@ import { TiendaComponent } from './components/tienda/tienda.component';
     KeeperComponent,
     NotFoundComponent,
     ParqueComponent,
-    TiendaComponent,
+    TiendaComponent
+    /*
+    MainComponent,
+    AddComponent,
+    EditComponent,
+    ListComponent,
+    */
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
     routing,
-    ModuloEmailModule
+    ModuloEmailModule,
+    AdminModule
 
   ],
   providers: [
