@@ -48,6 +48,16 @@ export class UsuarioService {
     return this._http.put(this.url + 'update/' + id, params, { headers: headers }).map(res => res.json());
   }
 
+  getUser() {
+    const headers = new Headers(
+      {
+        'Content-Type': 'application/json',
+        'Authorization': this.getToken()
+      });
+    return this._http.get(this.url + 'list', { headers: headers }).map(res => res.json());
+
+  }
+
 
   getIdentity() {
     const _identity = JSON.parse(localStorage.getItem('identity'));

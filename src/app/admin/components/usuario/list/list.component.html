@@ -12,10 +12,10 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let n of numbers; let i = index">
-      <td>jinmi lidonil {{ i + 1}}</td>
-      <td>Vega Vega</td>
-      <td>jinmi16@gmail.com</td>
+    <tr *ngFor="let user of users">
+      <td>{{user.nombre}}</td>
+      <td>{{user.apellido}}</td>
+      <td>{{user.email}}</td>
       <td>
         <button class="btn btn-sm btn-success">
           Ver
