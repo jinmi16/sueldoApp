@@ -20,12 +20,15 @@ import { ParqueComponent } from './components/parque/parque.component';
 import { TiendaComponent } from './components/tienda/tienda.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
+import { UserEditComponent } from './components/user-edit/user-edit.component';
 /*
 import { MainComponent } from './admin/components/main/main.component';
 import { AddComponent } from './admin/components/usuario/add/add.component';
 import { EditComponent } from './admin/components/usuario/edit/edit.component';
 import { ListComponent } from './admin/components/usuario/list/list.component';
 */
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,7 +40,8 @@ import { ListComponent } from './admin/components/usuario/list/list.component';
     ParqueComponent,
     TiendaComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    UserEditComponent
     /*
     MainComponent,
     AddComponent,
@@ -59,4 +63,6 @@ import { ListComponent } from './admin/components/usuario/list/list.component';
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+
+ }

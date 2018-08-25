@@ -8,12 +8,13 @@ import { MainComponent } from '../components/main/main.component';
 import { AddComponent } from '../components/usuario/add/add.component';
 import { EditComponent } from '../components/usuario/edit/edit.component';
 import { ListComponent } from '../components/usuario/list/list.component';
-
+import { AdminGuard } from '../../services/admin.guard';
 
 const adminRoutes: Routes = [
   {
     path: 'admin-panel', // localhost:4200/admin-lanel/listado
     component: MainComponent,
+    canActivate: [AdminGuard],
     children: [
       { path: '', redirectTo: 'listado', pathMatch: 'full' },
       { path: 'listado', component: ListComponent },

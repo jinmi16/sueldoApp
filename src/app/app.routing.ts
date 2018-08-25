@@ -11,6 +11,8 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
 import { RegisterComponent } from './components/register/register.component';
 import { LoginComponent } from './components/login/login.component';
 
+import { UserEditComponent } from './components/user-edit/user-edit.component';
+
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -20,6 +22,7 @@ const appRoutes: Routes = [
   { path: 'contacto', component: ContactComponent },
   { path: 'cuidadores', component: KeeperComponent },
   { path: 'registro', component: RegisterComponent },
+  { path: 'mis-datos', component: UserEditComponent },
   { path: 'login', component: LoginComponent },
    // { path: '404', component: NotFoundComponent },
   { path: '**', component: NotFoundComponent } // ** es pagina 404 cuando no existe lapagina
