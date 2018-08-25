@@ -22,8 +22,22 @@ export class ListComponent implements OnInit {
   getUsers() {
     this._userService.getUser().subscribe(
       response => {
-        console.log(JSON.stringify(response));
+       // console.log(JSON.stringify(response));
         this.users = response;
+      },
+      error => {
+        console.log(<any>error);
+      }
+
+    );
+  }
+
+  deleteUser(idUser) {
+    this._userService.deleteUser(idUser).subscribe(
+      response => {
+        console.log(JSON.stringify(response));
+       // this.users = response;
+       this.getUsers();
       },
       error => {
         console.log(<any>error);

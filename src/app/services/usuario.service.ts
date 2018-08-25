@@ -47,7 +47,15 @@ export class UsuarioService {
 
     return this._http.put(this.url + 'update/' + id, params, { headers: headers }).map(res => res.json());
   }
+  deleteUser(idUser) {
+    const headers = new Headers(
+      {
+        'Content-Type': 'application/json',
+        'Authorization': this.getToken()
+      });
+    return this._http.delete(this.url + 'delete/' + idUser, { headers: headers }).map(res => res.json());
 
+  }
   getUser() {
     const headers = new Headers(
       {
